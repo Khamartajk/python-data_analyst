@@ -1,0 +1,52 @@
+temp=100
+
+mytuple = ("apple", "banana", "cherry")
+myit = iter(mytuple)
+
+# print(next(myit))
+# print(next(myit))
+# print(next(myit))
+
+# string objects
+
+# mystr=("Python Programming")
+# for str in mystr:
+#    print (str)
+
+# mystr[2]="d"
+# print (mystr)
+
+
+
+# Polymorphism:---------------------------------------
+
+# parent class vehicle-------------------------
+class Vehicle:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Move!")
+
+# all child classes of vehicle parent class-------------------
+
+class Car(Vehicle):
+  pass
+
+class Boat(Vehicle):
+  def move(self):
+    print("Sail!")
+
+class Plane(Vehicle):
+  def move(self):
+    print("Fly!")
+
+car1 = Car("Ford", "Mustang") #Create a Car object
+boat1 = Boat("Ibiza", "Touring 20") #Create a Boat object
+plane1 = Plane("Boeing", "747") #Create a Plane object
+
+for x in (car1, boat1, plane1):
+  print(x.brand)
+  print(x.model)
+  x.move()
